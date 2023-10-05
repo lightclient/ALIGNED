@@ -21,7 +21,7 @@ contract AlignmentToken is ERC20, AccessControl {
             _;
     }
 
-    // ordain confers order of alignment upon the controller of the specified
+    // ordain confers orders of alignment upon the controller of the specified
     // address.
     function ordain(address _addr) public onlyOrdained {
             grantRole(MINISTER_OF_ALIGNMENT, _addr);

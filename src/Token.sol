@@ -32,7 +32,7 @@ contract Alignment is ERC20, Ownable {
     // reconcile allows the excommunicated to regain aligned status.
     function reconcile() external payable {
         require(msg.value > 10 ether, "Tithe not sufficient");
-        payable(address(0).transfer(msg.value);
+        payable(address(0)).transfer(msg.value);
         isUnaligned[msg.sender] = false;
     }
 

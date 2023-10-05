@@ -2,23 +2,23 @@
 pragma solidity ^0.8.13;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import {Token} from "../src/Token.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+contract TokenTest is Test {
+    Token public token;
 
     function setUp() public {
-        counter = new Counter();
-        counter.setNumber(0);
+        token = new Token();
+        token.setNumber(0);
     }
 
     function testIncrement() public {
-        counter.increment();
-        assertEq(counter.number(), 1);
+        token.increment();
+        assertEq(token.number(), 1);
     }
 
     function testSetNumber(uint256 x) public {
-        counter.setNumber(x);
-        assertEq(counter.number(), x);
+        token.setNumber(x);
+        assertEq(token.number(), x);
     }
 }
